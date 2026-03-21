@@ -51,15 +51,35 @@ classDiagram
         +afinar()*
     }
 
-    class Guitarra
-    class Piano
-    class Violin
-    class Bajo
+    class Guitarra {
+        +tocar()
+        +afinar()
+    }
 
-    Banda "1" o-- "0..*" Musico
-    Musico <|.. Amigo
-    Amigo --> Instrumento
+    class Piano {
+        +tocar()
+        +afinar()
+    }
+
+    class Violin {
+        +tocar()
+        +afinar()
+    }
+
+    class Bajo {
+        +tocar()
+        +afinar()
+    }
+
+    %% Relaciones
+    Banda "1" o-- "0..*" Musico : tiene
+    Musico <|.. Amigo : implementa
+    Amigo "1" --> "1" Instrumento : usa
+
     Instrumento <|-- Guitarra
     Instrumento <|-- Piano
     Instrumento <|-- Violin
     Instrumento <|-- Bajo
+
+    Banda ..> Amigo : crea
+    Banda ..> Instrumento : genera
