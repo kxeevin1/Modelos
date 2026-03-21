@@ -1,9 +1,9 @@
-#Banda Musical Aleatoria
+# Banda Musical Aleatoria
 
 Kevin Jhoan Carreño Patiño - 20242020308
 Daniel Felipe Santamaria Duran - 20242020023
 
-##Diagrama UML
+## Diagrama UML
 
 ```mermaid
 classDiagram
